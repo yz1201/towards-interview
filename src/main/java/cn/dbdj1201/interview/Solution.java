@@ -15,22 +15,18 @@ public class Solution {
             return root;
         }
         //找到中序中的根位置
-        int rootval = root.num;
+        int rootValue = root.num;
         int i;
         for (i = 0; i < len; i++) {
-            if (rootval == in[i])
+            if (rootValue == in[i])
                 break;
         }
         //创建左子树
         if (i > 0) {
             int[] pr = new int[i];
             int[] ino = new int[i];
-            for (int j = 0; j < i; j++) {
-                pr[j] = pre[j + 1];
-            }
-            for (int j = 0; j < i; j++) {
-                ino[j] = in[j];
-            }
+            System.arraycopy(pre, 1, pr, 0, i);
+            System.arraycopy(in, 0, ino, 0, i);
             root.left = reConstructBinaryTree(pr, ino);
         } else {
             root.left = null;
@@ -47,8 +43,6 @@ public class Solution {
         } else {
             root.right = null;
         }
-
-
         return root;
     }
 
@@ -56,7 +50,8 @@ public class Solution {
         int[] bt1 = {1, 2, 4, 7, 3, 5, 6, 8};
         int[] bt2 = {4, 7, 2, 1, 5, 3, 8, 6};
         TreeNode root = reConstructBinaryTree(bt1, bt2);
-        System.out.println(root);
+//        System.out.println(root);
+        root.postOrder();
     }
 }
 
