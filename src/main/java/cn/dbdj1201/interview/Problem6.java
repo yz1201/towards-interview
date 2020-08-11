@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @Author: dbdj1201
  * @Date: 2020-08-10 19:18
@@ -19,8 +22,25 @@ public class Problem6 {
         */
 //        log.info();
 
-        BinaryTree binaryTree = generateTree();
-        binaryTree.preOrder();
+//        BinaryTree binaryTree = generateTree();
+//        binaryTree.preOrder();
+    }
+
+    /**
+     * @param bt1 前序遍历结果
+     * @param bt2 中序遍历结果
+     */
+    private void test(int[] bt1, int[] bt2) {
+        //{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}
+        int rootValue = bt1[0];
+        int index = 0;
+        while (bt2[index] != rootValue) {
+            index++;
+        }
+        //中序遍历的root位置 index-1
+        //锁定根节点左子树范围 0, index-2
+        //右子树范围index-1, len-1
+
     }
 
     private static BinaryTree generateTree() {
@@ -64,22 +84,22 @@ class TreeNode {
     void preOrder() {
         System.out.println("root - " + this);
 
-        while (this.left != null) {
+        if (this.left != null) {
             this.left.preOrder();
         }
 
-        while (this.right != null) {
+        if (this.right != null) {
             this.right.preOrder();
         }
-
     }
 
-    @Override
-    public String toString() {
-        return "TreeNode{" +
-                "num=" + num +
-                '}';
-    }
+
+//    @Override
+//    public String toString() {
+//        return "TreeNode{" +
+//                "num=" + num +
+//                '}';
+//    }
 }
 
 @Data
@@ -93,7 +113,7 @@ class BinaryTree {
     public void preOrder() {
         if (root == null) {
             System.out.println("头节点为空，二叉树死了┭┮﹏┭┮");
-        }else {
+        } else {
             root.preOrder();
         }
 
