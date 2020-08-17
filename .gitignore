@@ -7,6 +7,11 @@
 *.iml
 out
 gen
-target
+target/*
 *.log*
 
+!/.idea/
+.idea/dictionaries/
+.idea/smartfox_info.xml
+.idea/vcs.xml
+src/test/
