@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="final-trget" />
+        <module name="towards-interview" />
       </profile>
     </annotationProcessing>
   </component>
