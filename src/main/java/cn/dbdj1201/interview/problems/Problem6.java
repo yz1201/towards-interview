@@ -1,11 +1,8 @@
-package cn.dbdj1201.interview;
+package cn.dbdj1201.interview.problems;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @Author: dbdj1201

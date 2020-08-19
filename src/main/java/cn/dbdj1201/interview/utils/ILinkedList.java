@@ -76,24 +76,44 @@ public class ILinkedList {
         System.out.println(sb.toString());
     }
 
+//    public INode reverse() {
+//        INode result;
+//        INode temp = this.head;
+//        INode preNode = temp;
+//        if (head == null) {
+//            System.out.println("?");
+//            return null;
+//        }
+//
+//
+//        while (temp != null) {
+//            temp = temp.next;
+//
+//            preNode.next = null;
+//
+//        }
+//
+//        return null;
+//    }
+
+//    @Data
+//    @AllArgsConstructor
+//    @NoArgsConstructor
+//    static class INode {
+//        int num;
+//        INode next;
+//
+//        public INode(int num) {
+//            this.num = num;
+//        }
+//
+//        @Override
+//        public String toString() {
+//            return "INode{" +
+//                    "num=" + num +
+//                    '}';
+//        }
+//    }
 
 }
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class INode {
-    int num;
-    INode next;
-
-    public INode(int num) {
-        this.num = num;
-    }
-
-    @Override
-    public String toString() {
-        return "INode{" +
-                "num=" + num +
-                '}';
-    }
-}

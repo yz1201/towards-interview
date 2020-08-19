@@ -1,4 +1,4 @@
-package cn.dbdj1201.interview;
+package cn.dbdj1201.interview.problems;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

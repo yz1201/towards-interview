@@ -1,4 +1,4 @@
-package cn.dbdj1201.interview;
+package cn.dbdj1201.interview.problems;
 
 /**
  * @author yz1201

@@ -1,4 +1,4 @@
-package cn.dbdj1201.interview;
+package cn.dbdj1201.interview.problems;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,10 +20,10 @@ public class Prob6 {
         reverseList(generateNodeList());
     }
 
-    public static ILinkedList test() {
+    public static ILinkedList1 test() {
         Node n1 = generateNodeList();
 
-        ILinkedList iLinkedList = new ILinkedList(n1);
+        ILinkedList1 iLinkedList = new ILinkedList1(n1);
         iLinkedList.show();
         return iLinkedList;
     }
@@ -85,7 +85,7 @@ class Node {
 @AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
-class ILinkedList {
+class ILinkedList1 {
     //头节点
     Node head;
 
