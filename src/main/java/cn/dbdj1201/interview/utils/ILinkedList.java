@@ -76,6 +76,47 @@ public class ILinkedList {
         System.out.println(sb.toString());
     }
 
+    public void sortedAdd(INode node) {
+        if (this.head == null) {
+            this.head = node;
+            return;
+        }
+
+        if (this.head.num > node.num) {
+            INode temp = this.head;
+            this.head = node;
+            node.next = temp;
+        }
+
+        INode temp = this.head;
+        while (temp.next != null) {
+            if (node.num < temp.next.num) {
+                node.next = temp.next;
+                temp.next = node;
+                return;
+            }else {
+                temp = temp.next;
+            }
+        }
+        temp.next = node;
+    }
+
+    public static void main(String[] args) {
+        INode iNode1 = new INode(1);
+        INode iNode2 = new INode(3);
+        INode iNode3 = new INode(2);
+        INode iNode4 = new INode(4);
+
+        ILinkedList list = new ILinkedList();
+
+        list.sortedAdd(iNode1);
+        list.sortedAdd(iNode2);
+        list.sortedAdd(iNode3);
+        list.sortedAdd(iNode4);
+
+        list.show();
+    }
+
 //    public INode reverse() {
 //        INode result;
 //        INode temp = this.head;
