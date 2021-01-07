@@ -1,4 +1,4 @@
-package cn.dbdj1201.interview.singleton;
+package cn.dbdj1201.interview.design.singleton;
 
 /**
  * @Author: yz1201

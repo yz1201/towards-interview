@@ -1,4 +1,4 @@
-package cn.dbdj1201.interview.singleton;
+package cn.dbdj1201.interview.design.singleton;
 
 import lombok.extern.slf4j.Slf4j;
 
