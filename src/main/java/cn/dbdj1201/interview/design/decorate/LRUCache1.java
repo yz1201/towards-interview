@@ -13,7 +13,7 @@ public class LRUCache1<K, V> extends LinkedHashMap<K, V> {
 
     //之后使用LinkedHashMap的构造函数将 accessOrder设置为 true，开启 LRU顺序；
     public LRUCache1() {
-        //看着像装饰器，说实话
+        //看着像装饰器，说实话0
         super(MAX_ENTRIES, 0.75f, true);
     }
 

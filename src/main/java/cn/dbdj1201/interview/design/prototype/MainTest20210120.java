@@ -12,6 +12,5 @@ public class MainTest20210120 {
         Citation clone = citation.clone();
         clone.setName("t2");
         clone.display();
-
     }
 }
