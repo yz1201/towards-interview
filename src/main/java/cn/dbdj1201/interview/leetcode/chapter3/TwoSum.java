@@ -29,6 +29,7 @@ public class TwoSum {
         int[] testArr = {1, 2, 3, 45};
 //        System.out.println(Arrays.toString(calPosition(testArr, 3)));
         System.out.println(calPositionFool(3, testArr));
+
     }
 
 
