@@ -11,16 +11,16 @@ public class TwoSum {
     输入是一个数组（numbers）和一个给定值（target）。输出是两个数的位置，从 1 开始计数。
      */
 
-    public static int[] calPosition(int[] arr, int target) {
+    public static int[] calPosition(int[] nums, int target) {
         HashMap<Integer, Integer> m = new HashMap<>();
         int[] res = new int[2];
-        for (int i = 0; i < arr.length; ++i) {
-            if (m.containsKey(target - arr[i])) {
+        for (int i = 0; i < nums.length; ++i) {
+            if (m.containsKey(target - nums[i])) {
                 res[0] = i;
-                res[1] = m.get(target - arr[i]);
+                res[1] = m.get(target - nums[i]);
                 break;
             }
-            m.put(arr[i], i);
+            m.put(nums[i], i);
         }
         return res;
     }

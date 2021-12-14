@@ -33,6 +33,8 @@ public class Test01 {
 //        System.out.println(1 ^ 0);
 //        System.out.println(Integer.toBinaryString(11));
 
-        System.out.println(calHammingDistanceSmart(1, 8));
+//        System.out.println(calHammingDistanceSmart(1, 8));
+
+
     }
 }

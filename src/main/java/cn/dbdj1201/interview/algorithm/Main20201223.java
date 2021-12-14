@@ -13,7 +13,7 @@ public class Main20201223 {
         String s = "sadasd";
 
         System.out.println("sadas");
-        log.debug("sadasda{}",s);
+//        log.debug("sadasda{}",s);
     }
 
 }
