@@ -14,14 +14,30 @@ public class PalindromeSolution {
         System.out.println(solutePro(2147483647));
     }
 
-    public static boolean solutePro(int x){
+    public static boolean solutePro(int x) {
         try {
             String s = String.valueOf(x);
             String reverse = StrUtil.reverse(s);
-            return  reverse.equals(s);
-        }catch (RuntimeException e){
-            log.error("not palindrome - {}",x);
+            return reverse.equals(s);
+        } catch (RuntimeException e) {
+            log.error("not palindrome - {}", x);
             return false;
         }
+    }
+
+    public static boolean isPalindrome(int x) {
+
+
+        if ((x != 0 && x % 10 == 0) || x < 0) {
+            return false;
+        }
+
+        int reverse = 0;
+        while (x > reverse) {
+            reverse = reverse * 10 + x % 10;
+            x /= 10;
+        }
+
+        return x == reverse / 10 || x == reverse;
     }
 }
