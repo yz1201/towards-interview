@@ -17,9 +17,11 @@ public class MidSortForeachTask {
     public static void main(String[] args) {
         TreeNode left = new TreeNode(2);
         TreeNode right = new TreeNode(3);
-        TreeNode root = new TreeNode(1,left,right);
+        TreeNode root = new TreeNode(1, left, right);
         System.out.println(inorderTraversal(root));
         System.out.println(preorderTraversal(root));
+        String test = "";
+        System.out.println("---" + test.trim() + "====");
     }
 
     public static List<Integer> inorderTraversal(TreeNode root) {
