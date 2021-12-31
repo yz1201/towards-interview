@@ -54,6 +54,15 @@ public class MidSortForeachTask {
         preorder(root.right, res);
     }
 
+    public static void postOrder(TreeNode root, List<Integer> res) {
+        if (root == null) {
+            return;
+        }
+        postOrder(root.left, res);
+        postOrder(root.right, res);
+        res.add(root.val);
+    }
+
     public List<Integer> inorderTraversalCopy(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Deque<TreeNode> stk = new LinkedList<>();

@@ -26,6 +26,9 @@ public class ReverseBitsTask {
         System.out.println(sb);
         sb.reverse();
         System.out.println(sb);
+        System.out.println(Integer.reverse(n));
         return Integer.parseUnsignedInt(sb.toString(), 2);
     }
+
+
 }
