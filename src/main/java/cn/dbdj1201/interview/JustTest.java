@@ -6,37 +6,14 @@ package cn.dbdj1201.interview;
  */
 public class JustTest {
     public static void main(String[] args) {
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
-        System.out.println("????");
+//        int len = 1;
+//        System.out.println(1 << len);
+//
+//        System.out.println(Character.isLetterOrDigit('中'));
+
+        int num = 2;
+                System.out.println(num >> 1);
+        System.out.println(num >> 1 | num);
+//        System.out.println(num >>> 1);
     }
 }
