@@ -70,6 +70,7 @@ public class LengthOfLongestSubStringTask {
         for (int i = 0; i < len; i++) {
             if (i != 0)
                 set.remove(s.charAt(i - 1));
+            //rk 关注下rk 为什么是从-1开始的。
             while (rk + 1 < len && !set.contains(s.charAt(rk + 1))) {
                 set.add(s.charAt(rk + 1));
                 rk++;
