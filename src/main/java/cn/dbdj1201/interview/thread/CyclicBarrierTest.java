@@ -10,7 +10,7 @@ import java.util.concurrent.CyclicBarrier;
 public class CyclicBarrierTest {
 
     public static void main(String[] args) {
-        CyclicBarrier barrier = new CyclicBarrier(3, () -> System.out.println("enough, go go"));
+        CyclicBarrier barrier = new CyclicBarrier(5, () -> System.out.println("enough, go go"));
         System.out.println("game start");
         int len = 6;
         for (int i = 0; i < len; i++) {
