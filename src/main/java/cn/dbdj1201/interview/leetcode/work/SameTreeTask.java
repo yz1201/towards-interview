@@ -35,4 +35,24 @@ public class SameTreeTask {
             return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
         }
     }
+
+    public  static boolean isSymmetric(TreeNode root) {
+        if (root == null){
+            return false;
+        }
+        return judgeSymmetric(root.left,root.right);
+    }
+
+    public static boolean judgeSymmetric(TreeNode p, TreeNode q) {
+        if (p == null && q == null) {
+            return true;
+        } else if (p == null || q == null) {
+            return false;
+        } else if (p.val != q.val) {
+            return false;
+        } else {
+            return judgeSymmetric(p.left, q.right) && judgeSymmetric(p.right, q.left);
+        }
+    }
+
 }
