@@ -11,9 +11,11 @@
         <module name="final-target" />
         <module name="towards-interview" />
         <module name="DeepInSpring" />
-        <module name="dbdj1201" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dbdj1201" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

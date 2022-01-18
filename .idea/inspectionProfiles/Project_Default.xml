@@ -100,6 +100,9 @@
           <option value="junit:junit" />
           <option value="org.projectlombok:lombok" />
           <option value="cn.hutool:hutool-all" />
+          <option value="org.slf4j:slf4j-log4j12" />
+          <option value="com.alibaba:druid-spring-boot-starter" />
+          <option value="commons-io:commons-io" />
         </list>
       </option>
     </inspection_tool>

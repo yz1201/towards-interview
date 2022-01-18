@@ -19,14 +19,14 @@ public class ConcurrentHashMapTest {
 
         TransferQueue<String> transferQueue = new LinkedTransferQueue<>();
 
-        new Thread(()->{
-            try {
-                System.out.println(transferQueue.take());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }).start();
-        System.out.println("???"+transferQueue.size());
+//        new Thread(()->{
+//            try {
+//                System.out.println(transferQueue.take());
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }).start();
+//        System.out.println("???"+transferQueue.size());
 
         new Thread(()->{
             try {
@@ -50,7 +50,7 @@ public class ConcurrentHashMapTest {
         }).start();
 
 
-        transferQueue.transfer("?test?");
+        transferQueue.put("?test?");
 
     }
 }
