@@ -87,7 +87,6 @@ public class FirstUniqCharTask {
         Map<Character, Integer> charsMap = new HashMap<>(len);
 
         for (int i = 0; i < len; i++) {
-            char temp = s.charAt(i);
             boolean flag = true;
             for (int j = 0; j < len; j++) {
                 if (j != i) {

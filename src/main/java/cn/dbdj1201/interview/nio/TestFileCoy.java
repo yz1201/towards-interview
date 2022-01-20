@@ -27,7 +27,7 @@ public class TestFileCoy {
 //        Files.co
 //        Path path
 
-        copy("E:\\develop\\temp\\test\\src\\4.txt", "E:\\develop\\temp\\test\\target");
+        copy("E:\\develop\\temp\\test\\src\\", "E:\\develop\\temp\\test\\target");
     }
 
     private static void copyDir(String srcPath, String targetPath) throws IOException {
@@ -68,7 +68,7 @@ public class TestFileCoy {
                     @Override
                     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
                             throws IOException {
-                        Files.copy(file, target.resolve(source.relativize(file)));
+                        Files.copy(file, target.resolve(source.relativize(file)),StandardCopyOption.COPY_ATTRIBUTES);
                         return FileVisitResult.CONTINUE;
                     }
                 });
