@@ -31,6 +31,8 @@ public class ConcurrentHashMapTest {
         new Thread(()->{
             try {
                 System.out.println(transferQueue.take());
+                transferQueue.transfer("test?");
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -38,11 +40,12 @@ public class ConcurrentHashMapTest {
 
 //        transferQueue.put("test");
 //        transferQueue.add("test");
-        transferQueue.transfer("test?");
-        System.out.println("???"+transferQueue.size());
+//        transferQueue.transfer("test?");
+//        System.out.println("???"+transferQueue.size());
 
         new Thread(()->{
             try {
+                System.out.println("new thread start");
                 System.out.println(transferQueue.take());
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -50,7 +53,7 @@ public class ConcurrentHashMapTest {
         }).start();
 
 
-        transferQueue.put("?test?");
+//        transferQueue.put("?test?");
 
     }
 }
