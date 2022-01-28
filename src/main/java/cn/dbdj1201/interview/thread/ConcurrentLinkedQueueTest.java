@@ -7,6 +7,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @Author: yz1201
@@ -15,9 +17,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 @Slf4j
 public class ConcurrentLinkedQueueTest {
 
-    //    static ConcurrentLinkedQueue<String> tickets = new ConcurrentLinkedQueue<>();
+        static ConcurrentLinkedQueue<String> tickets = new ConcurrentLinkedQueue<>();
 //    static Deque<String> tickets = new LinkedList<>();
-static List<String> tickets = new ArrayList<>();
+//static List<String> tickets = new ArrayList<>();
     static {
         int len = 1000;
         for (int i = 0; i < len; i++) {
@@ -27,23 +29,34 @@ static List<String> tickets = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        int len = 10;
-        for (int i = 0; i < len; i++) {
-
-            new Thread(() -> {
-
-                while (true) {
+//        int len = 10;
+//        for (int i = 0; i < len; i++) {
+//
+//            new Thread(() -> {
+//
+//                while (true) {
 //                    String s = tickets.poll();
-                    String s = tickets.remove(0);
-                    if (s == null) break;
-                    else System.out.println(Thread.currentThread().getName()+ " 抢到了 - " + s);
+////                    String s = tickets.remove(0);
+//                    if (s == null) break;
+//                    else System.out.println(Thread.currentThread().getName()+ " 抢到了 - " + s);
+//
+//                }
+//
+//            }).start();
+//
+//        }
 
-                }
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-            }).start();
+        executorService.submit(()->{
+            while (true) {
+                String s = tickets.poll();
+                if (s == null) break;
+                else System.out.println(Thread.currentThread().getName()+ " 抢到了 - " + s);
+            }
+        });
 
-        }
-
+        executorService.shutdown();
 
     }
 }

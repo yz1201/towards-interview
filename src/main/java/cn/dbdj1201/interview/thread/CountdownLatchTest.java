@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class CountdownLatchTest {
 
     public static void main(String[] args) {
-        CountDownLatch latch = new CountDownLatch(3);
+        CountDownLatch latch = new CountDownLatch(5);
 
         Thread[] threads = new Thread[100];
         System.out.println("game start");

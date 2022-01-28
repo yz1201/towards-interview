@@ -10,24 +10,21 @@ import java.util.concurrent.CyclicBarrier;
 public class CyclicBarrierTest {
 
     public static void main(String[] args) {
-        CyclicBarrier barrier = new CyclicBarrier(5, () -> System.out.println("enough, go go"));
+        CyclicBarrier barrier = new CyclicBarrier(10, () -> System.out.println("enough, go go"));
         System.out.println("game start");
         int len = 6;
         for (int i = 0; i < len; i++) {
             new Thread(() -> {
                 try {
+                    System.out.println("help s");
                     barrier.await();
-
-
-                    System.out.println("help");
-
-
+                    System.out.println("help e");
                 } catch (InterruptedException | BrokenBarrierException e) {
                     e.printStackTrace();
                 }
             }).start();
         }
-        System.out.println("game over");
+//        System.out.println("game over");
     }
 
 }
