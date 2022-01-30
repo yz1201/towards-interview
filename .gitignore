@@ -16,3 +16,4 @@ target/*
 .idea/vcs.xml
 src/test/
 .iml
+/.idea/runConfigurations.xml
