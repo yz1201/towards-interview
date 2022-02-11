@@ -13,7 +13,7 @@ public class MinNumberTaskI {
 
     public static void main(String[] args) {
         int[] nums = {2, 12, 32, 0};
-        System.out.println(minNumber(nums));
+        System.out.println(minNumberCopy(nums));
     }
 
     public static String minNumber(int[] nums) {
@@ -54,6 +54,9 @@ public class MinNumberTaskI {
             strs[i] = strs[j];
             strs[j] = tmp;
         }
+        System.out.println(Arrays.toString(strs));
+        System.out.println(tmp);
+        System.out.println("===========================");
         strs[i] = strs[l];
         strs[l] = tmp;
         quickSort(strs, l, i - 1);
