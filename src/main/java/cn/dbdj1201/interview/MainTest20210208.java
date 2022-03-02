@@ -15,22 +15,7 @@ import java.util.List;
  */
 public class MainTest20210208 {
     public static void main(String[] args) {
-
-
-//        List<String> names = new ArrayList<>();
-//
-//        names.add("t1");
-//        names.add("t2");
-//        names.add("t3");
-//        names.add("t4");
-//        names.add("t5");
-//        names.add("t6");
-
-//        names.stream()
-
-
-
-        long l = 1614761236000L;
+        long l = 1652033100000l;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         System.out.println(sdf.format(new Date(l)));
