@@ -11,24 +11,33 @@ import java.util.Arrays;
 @Slf4j
 public class DoMaximumProduct {
     public static void main(String[] args) {
-
+        int[] nums = {-5, 8, 1, 2, 3};
+        System.out.println(maximumProduct1(nums));
+        System.out.println(maximumProduct(nums));
     }
 
-    public  static int maximumProduct(int[] nums) {
+    public static int maximumProduct(int[] nums) {
         int len = nums.length;
-        if (len ==3) return nums[0]*nums[1]*nums[2];
-
         Arrays.sort(nums);
+        return Math.max(nums[len - 1] * nums[len - 2] * nums[len - 3], nums[len - 1] * nums[0] * nums[1]);
+    }
 
-        int zeroIndex =0;
+
+    public static int maximumProduct1(int[] nums) {
+        int len = nums.length;
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < len; i++) {
-            if (nums[i] ==0){
-                zeroIndex = i;
+            int a = nums[i];
+            for (int i1 = i + 1; i1 < len; i1++) {
+                int b = nums[i1];
+                for (int i2 = i1 + 1; i2 < len; i2++) {
+                    int c = nums[i2];
+                    System.out.println(a + "-" + b + "-" + c);
+                    max = Math.max(a * b * c, max);
+                }
             }
+
         }
-
-
-
-        return -1;
+        return max;
     }
 }
