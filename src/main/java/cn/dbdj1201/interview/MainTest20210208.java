@@ -21,7 +21,7 @@ public class MainTest20210208 {
 
         System.out.println(sdf.format(new Date(l)));
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date parse = sdf.parse("2023-01-12 10:05" +
+        Date parse = sdf.parse("2022-03-10 11:20" +
                 ":00");
         System.out.println(parse.getTime());
 
