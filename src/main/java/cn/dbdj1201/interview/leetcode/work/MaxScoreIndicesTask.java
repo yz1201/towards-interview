@@ -40,7 +40,6 @@ public class MaxScoreIndicesTask {
             buffer.clear();
         }
         fc.close();
-        List<Integer> numList = new ArrayList<>();
         text.deleteCharAt(0);
         text.deleteCharAt(text.length() - 1);
         String[] split = text.toString().split(",");
@@ -51,8 +50,10 @@ public class MaxScoreIndicesTask {
 //        System.out.println(Arrays.toString(a));
 //        List<Integer> list = List.of(1, 2, 3, 4);
 //        System.out.println(list.subList(0, 3));
+        int[] nums1 = {0,0,1,0};
         log.info("start");
-        System.out.println(maxScoreIndices(Arrays.stream(split).mapToInt(Integer::parseInt).toArray()));
+//        System.out.println(maxScoreIndices(Arrays.stream(split).mapToInt(Integer::parseInt).toArray()));
+        System.out.println(maxScoreIndicesCopy(nums1));
         log.info("end");
 
     }
@@ -87,20 +88,22 @@ public class MaxScoreIndicesTask {
     }
 
     public static List<Integer> maxScoreIndicesCopy(int[] nums) {
-        List<Integer> ans=new ArrayList<>();
+        List<Integer> ans = new ArrayList<>();
         ans.add(0);
-        int max=0,preSum=0;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]==0){
+        int max = 0, preSum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
                 preSum++;
-                if(preSum>max){
-                    ans=new ArrayList<>();
-                    ans.add(i+1);
-                    max=preSum;
+                if (preSum > max) {
+                    ans = new ArrayList<>();
+                    ans.add(i + 1);
+                    max = preSum;
+                } else if (preSum == max) {
+                    ans.add(i + 1);
                 }
-                else if(preSum==max){ans.add(i+1);}
+            } else {
+                preSum--;
             }
-            else{preSum--;}
         }
         return ans;
     }
