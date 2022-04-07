@@ -22,7 +22,7 @@ public class JudgeReorderDoubled {
         System.out.println(canReorderDoubled(arr1));
         System.out.println(canReorderDoubled(arr2));
         System.out.println(canReorderDoubled(arr3));
-        System.out.println(canReorderDoubled(arr4));
+        System.out.println(canReorderDoubledCopy(arr4));
     }
 
     public static boolean canReorderDoubled(int[] arr) {
@@ -98,4 +98,26 @@ public class JudgeReorderDoubled {
 
         return true;
     }
+
+    public static boolean canReorderDoubledCopy(int[] arr) {
+        Map<Integer, Integer> cnt = new HashMap<>();
+        for (int x : arr) {
+            cnt.put(x, cnt.getOrDefault(x, 0) + 1);
+        }
+        if (cnt.getOrDefault(0, 0) % 2 != 0) {
+            return false;
+        }
+
+        List<Integer> vals = new ArrayList<>(cnt.keySet());
+        vals.sort(Comparator.comparingInt(Math::abs));
+
+        for (int x : vals) {
+            if (cnt.getOrDefault(2 * x, 0) < cnt.get(x)) { // 无法找到足够的 2x 与 x 配对
+                return false;
+            }
+            cnt.put(2 * x, cnt.getOrDefault(2 * x, 0) - cnt.get(x));
+        }
+        return true;
+    }
+
 }
