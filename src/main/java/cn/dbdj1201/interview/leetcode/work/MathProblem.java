@@ -15,8 +15,9 @@ public class MathProblem {
         int[] a1 = {1,2};
         int[] a2 = {3,4};
         System.out.println(findMedianSortedArrays(a1, a2));
-        double a = 5;
-        System.out.println(a/2);
+        double a = 0;
+        a = 5/2;
+        System.out.println(a);
     }
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
