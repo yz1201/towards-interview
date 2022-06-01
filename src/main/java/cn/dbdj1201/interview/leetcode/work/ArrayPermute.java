@@ -25,8 +25,6 @@ public class ArrayPermute {
         for (int i = 0; i < newLen; i++) {
             //循环打印|整理结果集
             for (int i1 = 0; i1 < length; i1++) {
-                System.out.print(nums[i1]);
-                System.out.print(" ,");
                 numArray.add(nums[i1]);
 
             }
