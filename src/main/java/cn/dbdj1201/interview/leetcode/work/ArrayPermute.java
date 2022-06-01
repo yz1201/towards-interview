@@ -27,6 +27,8 @@ public class ArrayPermute {
             for (int i1 = 0; i1 < length; i1++) {
                 numArray.add(nums[i1]);
 
+
+                System.out.println("tesst - - ");
             }
             //交换位置
 
