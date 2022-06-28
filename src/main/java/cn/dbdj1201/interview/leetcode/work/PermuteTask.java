@@ -2,9 +2,7 @@ package cn.dbdj1201.interview.leetcode.work;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author: yz1201
@@ -14,7 +12,7 @@ import java.util.List;
 public class PermuteTask {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3};
-        System.out.println(permute(nums));
+        System.out.println(permuteMemory(nums));
     }
 
     public static List<List<Integer>> permute1(int[] nums) {
@@ -59,4 +57,29 @@ public class PermuteTask {
         }
     }
 
+    public static List<List<Integer>> permuteMemory(int[] nums) {
+        int len = nums.length;
+        List<List<Integer>> res = new ArrayList<>();
+        boolean[] ctl = new boolean[len];
+        Deque<Integer> path = new ArrayDeque<>();
+        int depth = 0;
+        backtrackMemory(res, ctl, path, len, depth, nums);
+        return res;
+    }
+
+    private static void backtrackMemory(List<List<Integer>> res, boolean[] ctl, Deque<Integer> path, int len, int depth, int[] nums) {
+        if (depth == len) {
+            res.add(new ArrayList<>(path));
+            return;
+        }
+        for (int i = 0; i < len; i++) {
+            if (ctl[i])
+                continue;
+            path.addLast(nums[i]);
+            ctl[i] = true;
+            backtrackMemory(res, ctl, path, len, depth + 1, nums);
+            ctl[i] = false;
+            path.removeLast();
+        }
+    }
 }

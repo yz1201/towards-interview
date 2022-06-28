@@ -27,8 +27,8 @@ public class PermuteUnique {
     static boolean[] vis;
 
     public static List<List<Integer>> permuteUniqueCopy(int[] nums) {
-        List<List<Integer>> ans = new ArrayList<List<Integer>>();
-        List<Integer> perm = new ArrayList<Integer>();
+        List<List<Integer>> ans = new ArrayList<>();
+        List<Integer> perm = new ArrayList<>();
         vis = new boolean[nums.length];
         Arrays.sort(nums);
         backtrack(nums, ans, 0, perm);
@@ -37,7 +37,7 @@ public class PermuteUnique {
 
     public static void backtrack(int[] nums, List<List<Integer>> ans, int idx, List<Integer> perm) {
         if (idx == nums.length) {
-            ans.add(new ArrayList<Integer>(perm));
+            ans.add(new ArrayList<>(perm));
             return;
         }
         for (int i = 0; i < nums.length; ++i) {
