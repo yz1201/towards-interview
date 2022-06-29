@@ -1,5 +1,6 @@
 package cn.dbdj1201.interview.thread;
 
+import cn.dbdj1201.interview.leetcode.work.Codec;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.ExecutorService;
@@ -15,11 +16,14 @@ import java.util.concurrent.TimeUnit;
 public class TestMain062805 {
     public static void main(String[] args) {
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
-        int len = 5;
-        log.info("start");
+        int len = 10;
+        Codec codec = new Codec();
+        String encode = codec.encode("https://leetcode.com/problems/design-tinyurl");
+        log.info("task start {}", encode);
         for (int i = 0; i < len; i++) {
             scheduledExecutorService.schedule(() -> {
-                log.info("task");
+                String decode = codec.decode(encode);
+                log.info("decode {}", decode);
             }, 2, TimeUnit.SECONDS);
         }
         scheduledExecutorService.shutdown();
