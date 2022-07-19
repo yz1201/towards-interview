@@ -21,7 +21,7 @@ public class RestoreIpAddress {
 //        System.out.println("121".substring(0,1));
 
 //        System.out.println(restoreIpAddresses("0000"));
-        System.out.println(restoreIpAddresses("25525511135"));
+        System.out.println(restoreIpAddressesCopy("25525511135"));
 
     }
 
