@@ -3,6 +3,8 @@ package cn.dbdj1201.interview.test;
 import cn.dbdj1201.interview.leetcode.work.simple.Q1160;
 import lombok.extern.slf4j.Slf4j;
 
+import java.time.LocalDateTime;
+
 /**
  * @Author: yz1201
  * @Date: 2022/8/2 8:49
@@ -29,6 +31,9 @@ public class TestMain080201 {
         String dic = "atach";
 
         Q1160 q1160 = new Q1160();
-        System.out.println(q1160.countCharacters(words1, dic));
+//        System.out.println(q1160.countCharacters(words1, dic));
+
+        LocalDateTime time = LocalDateTime.of(2022,8,8,17,12,0);
+        System.out.println(time.toString());
     }
 }
