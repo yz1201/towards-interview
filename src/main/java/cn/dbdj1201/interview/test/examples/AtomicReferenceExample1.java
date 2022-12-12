@@ -18,19 +18,24 @@ public class AtomicReferenceExample1 {
             new Thread("T-" + i){
                 @Override
                 public void run() {
-                    final DebitCard dc = debitCard;
-                    // 基于全局DebitCard的金额增加10元并且产生一个新的DebitCard
-                    DebitCard newDC = new DebitCard(dc.getAccount(),
-                            dc.getAmount() + 10);
-                    // 输出全新的DebitCard
-                    System.out.println(newDC);
-                    // 修改全局DebitCard对象的引用
-                    debitCard = newDC;
-                    try {
-                        TimeUnit.MILLISECONDS.sleep(current().nextInt(20));
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                    
+                    synchronized (AtomicReferenceExample1.class){
+                        final DebitCard dc = debitCard;
+                        // 基于全局DebitCard的金额增加10元并且产生一个新的DebitCard
+                        DebitCard newDC = new DebitCard(dc.getAccount(),
+                                dc.getAmount() + 10);
+                        // 输出全新的DebitCard
+                        System.out.println(newDC);
+                        // 修改全局DebitCard对象的引用
+                        debitCard = newDC;
+                        try {
+                            TimeUnit.MILLISECONDS.sleep(current().nextInt(20));
+//                        TimeUnit.MILLISECONDS.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
+
                 }
             }.start();
         }
