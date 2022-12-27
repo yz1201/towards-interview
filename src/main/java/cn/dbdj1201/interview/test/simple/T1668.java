@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 /**
@@ -25,5 +26,6 @@ public class T1668 {
         System.out.println(l1);
         List<String> b = l1.stream().filter(str -> str.equals("b")).collect(Collectors.toList());
         System.out.println(b);
+        AtomicReference<String> stringAtomicReference = new AtomicReference<>();
     }
 }
