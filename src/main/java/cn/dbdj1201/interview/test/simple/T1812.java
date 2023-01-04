@@ -33,9 +33,16 @@ public class T1812 {
 //        }
 
         String s = new StringBuilder().append("ja").append("va").toString();
+        String s1 = new StringBuilder().append("ja1").append("va1").toString();
+
         System.out.println(s.intern() == s);
-        System.out.println(s.intern());
-        System.out.println(s);
+        System.out.println(s1.intern() == s1);
+
+//        String str2 = "SEUCalvin";//新加的一行代码，其余不变
+//        String str1 = new String("SEU")+ new String("Calvin");
+//        System.out.println(str1.intern() == str1);
+//        System.out.println(str1 == "SEUCalvin");
+
     }
 
     static void testOverflow(long sum){
