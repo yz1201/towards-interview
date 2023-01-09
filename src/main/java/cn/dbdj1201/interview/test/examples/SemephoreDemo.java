@@ -1,6 +1,7 @@
 package cn.dbdj1201.interview.test.examples;
 
 import cn.hutool.log.Log;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.*;
@@ -39,5 +40,10 @@ public class SemephoreDemo {
         executorService.shutdown();
         if (executorService.isTerminated())
             System.out.println("gg");
+    }
+
+    @SneakyThrows
+    private void test(){
+
     }
 }
