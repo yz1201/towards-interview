@@ -8,7 +8,28 @@
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[1051]高度检查器.md" />
               <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[1051]高度检查器.java" />
-              <option name="questionId" value="1137" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[1185]一周中的第几天.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[1185]一周中的第几天.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com1185" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[1185]一周中的第几天.java" />
+              <option name="titleSlug" value="day-of-the-week" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[1331]数组序号转换.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[1331]数组序号转换.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com1331" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[1331]数组序号转换.java" />
+              <option name="titleSlug" value="rank-transform-of-an-array" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -17,7 +38,6 @@
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[27]移除元素.md" />
               <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[27]移除元素.java" />
-              <option name="questionId" value="27" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -26,7 +46,6 @@
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[547]省份数量.md" />
               <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[547]省份数量.java" />
-              <option name="questionId" value="547" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -35,7 +54,6 @@
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[7]整数反转.md" />
               <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[7]整数反转.java" />
-              <option name="questionId" value="7" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -44,7 +62,6 @@
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[884]两句话中的不常见单词.md" />
               <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[884]两句话中的不常见单词.java" />
-              <option name="questionId" value="920" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -53,7 +70,6 @@
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[9]回文数.md" />
               <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[9]回文数.java" />
-              <option name="questionId" value="9" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -62,7 +78,6 @@
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/doc/content/[面试题 10.02]变位词组.md" />
               <option name="path" value="$PROJECT_DIR$/../../temp-data/idea/leetcode/editor/cn/[面试题 10.02]变位词组.java" />
-              <option name="questionId" value="1000040" />
             </LeetcodeEditor>
           </value>
         </entry>
