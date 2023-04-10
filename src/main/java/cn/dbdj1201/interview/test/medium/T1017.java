@@ -13,5 +13,6 @@ public class T1017 {
     public static void main(String[] args) {
         M1017 m1017 = new M1017();
         System.out.println(m1017.baseNeg2Copy(20));
+        System.out.println(999 & 1);
     }
 }
