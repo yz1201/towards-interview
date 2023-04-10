@@ -22,7 +22,7 @@ public class S412 {
                 strings.add(fizz);
             } else if (i % 3 != 0 && i % 5 == 0) {
                 strings.add(buzz);
-            } else if (i % 3 == 0 && i % 5 == 0) {
+            } else if (i % 3 == 0) {
                 strings.add(fb);
             } else {
                 strings.add(i + "");
