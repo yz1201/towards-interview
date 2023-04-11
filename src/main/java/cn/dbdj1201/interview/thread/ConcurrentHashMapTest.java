@@ -3,6 +3,7 @@ package cn.dbdj1201.interview.thread;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.LinkedTransferQueue;
 import java.util.concurrent.TransferQueue;
@@ -16,7 +17,6 @@ public class ConcurrentHashMapTest {
 
     public static void main(String[] args) throws InterruptedException {
 //        List<String> lists = new CopyOnWriteArrayList<>();
-
         TransferQueue<String> transferQueue = new LinkedTransferQueue<>();
 
 //        new Thread(()->{
