@@ -14,6 +14,6 @@ public class T202 {
         S202 s202 = new S202();
 
 //        System.out.println(s202.isHappy(2));
-        System.out.println(s202.isHappy(19));
+        System.out.println(s202.isHappyCopy(Integer.MAX_VALUE));
     }
 }
