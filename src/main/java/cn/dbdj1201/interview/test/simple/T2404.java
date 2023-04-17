@@ -23,5 +23,7 @@ public class T2404 {
         strings.add("1");
         strings.remove("2");
 
+//        strings.stream().findFirst().ifPresentOrElse();
+
     }
 }
