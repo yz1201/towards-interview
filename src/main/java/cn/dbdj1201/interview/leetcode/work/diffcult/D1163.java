@@ -107,7 +107,7 @@ public class D1163 {
         int i = 0, j = 1, n = s.length();
         while (j < n) {
             int k = 0;
-            //
+            //aaaab
             while (j + k < n && s.charAt(i + k) == s.charAt(j + k)) {
                 k++;
             }

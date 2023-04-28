@@ -12,7 +12,8 @@ public class T1163 {
 
     public static void main(String[] args) {
         D1163 d1163 = new D1163();
-        d1163.lastSubstringCopy("abab");
+        d1163.lastSubstringCopy("aaaasadsadadadasdasdasdasdasdsadsadasdasdasdasdasb");
+//        d1163.lastSubstringCopy("abab");
 //        String test = "";
 //        int len = 100;
 //        for (int i = 0; i < len; i++) {
