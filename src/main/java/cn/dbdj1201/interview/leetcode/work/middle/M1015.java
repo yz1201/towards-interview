@@ -10,6 +10,13 @@ import lombok.extern.slf4j.Slf4j;
 public class M1015 {
 
     public int smallestRepunitDivByK(int k) {
+        int p = 0;
+        for (int i = 1; i <= k; i++) {
+            p = (p * 10 + 1) % k;
+            if (p == 0) {
+                return i;
+            }
+        }
         return -1;
     }
 }
