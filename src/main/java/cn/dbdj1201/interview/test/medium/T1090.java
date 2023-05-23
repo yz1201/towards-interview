@@ -15,5 +15,6 @@ public class T1090 {
         int[] values = {5, 4, 3, 2, 1};
         int[] labels = {1, 1, 2, 2, 3};
         System.out.println(m1090.largestValsFromLabelsV1(values, labels, 3, 1));
+        System.out.println(m1090.largestValsFromLabelsCopy(values, labels, 3, 1));
     }
 }

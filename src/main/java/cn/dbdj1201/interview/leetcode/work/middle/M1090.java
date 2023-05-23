@@ -2,7 +2,10 @@ package cn.dbdj1201.interview.leetcode.work.middle;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -38,4 +41,26 @@ public class M1090 {
                 .reduce(Integer::sum)
                 .orElse(0);
     }
+
+    public int largestValsFromLabelsCopy(int[] values, int[] labels, int numWanted, int useLimit) {
+        int n = values.length;
+        Integer[] id = new Integer[n];
+        for (int i = 0; i < n; i++) {
+            id[i] = i;
+        }
+        Arrays.sort(id, (a, b) -> values[b] - values[a]);
+        int ans = 0, choose = 0;
+        Map<Integer, Integer> cnt = new HashMap<Integer, Integer>();
+        for (int i = 0; i < n && choose < numWanted; ++i) {
+            int label = labels[id[i]];
+            if (cnt.getOrDefault(label, 0) == useLimit) {
+                continue;
+            }
+            ++choose;
+            ans += values[id[i]];
+            cnt.put(label, cnt.getOrDefault(label, 0) + 1);
+        }
+        return ans;
+    }
+
 }
