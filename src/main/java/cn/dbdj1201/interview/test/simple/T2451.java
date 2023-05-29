@@ -3,8 +3,11 @@ package cn.dbdj1201.interview.test.simple;
 import cn.dbdj1201.interview.leetcode.work.simple.S2451;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @Author: yz1201
@@ -22,5 +25,7 @@ public class T2451 {
         System.out.println(set.add(new int[]{1, 2}));
         System.out.println(set.add(new int[]{1, 2}));
         System.out.println(set.add(new int[]{1, 2}));
+        List<String> strings = Arrays.stream(words).collect(Collectors.toList());
+
     }
 }
