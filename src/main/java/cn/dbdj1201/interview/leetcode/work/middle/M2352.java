@@ -34,6 +34,7 @@ public class M2352 {
         }
         return count;
     }
+
     public int equalPairsCopy(int[][] grid) {
         int res = 0, n = grid.length;
         for (int row = 0; row < n; row++) {
