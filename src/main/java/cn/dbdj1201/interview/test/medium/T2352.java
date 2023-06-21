@@ -3,6 +3,7 @@ package cn.dbdj1201.interview.test.medium;
 import cn.dbdj1201.interview.leetcode.work.middle.M2352;
 import lombok.extern.slf4j.Slf4j;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 /**
@@ -23,6 +24,9 @@ public class T2352 {
 //        System.out.println(Arrays.toString(nums[1]));
 //        System.out.println(Arrays.toString(nums[2]));
         M2352 m2352 = new M2352();
-        System.out.println(m2352.equalPairs(nums));
+//        System.out.println(m2352.equalPairs(nums));
+
+        System.out.println(LocalDate.now().minusDays(1));
+
     }
 }
