@@ -24,6 +24,7 @@ public class T2178 {
 //        System.out.println(nums.stream().sorted(Comparator.comparingDouble(Double::valueOf)).collect(Collectors.toList()));
 
 //        new StringBuilder()
-        String s = "123456  ";
+        String s = "123456";
+        System.out.println(s.substring(3));
     }
 }
