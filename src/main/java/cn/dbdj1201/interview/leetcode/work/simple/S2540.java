@@ -33,4 +33,12 @@ public class S2540 {
         }
         return -1;
     }
+
+    public static void main(String[] args) {
+        String a ="a";
+
+        System.out.println(a == "a");
+        System.out.println(a.equals("a"));
+        System.out.println(a!= "");
+    }
 }
