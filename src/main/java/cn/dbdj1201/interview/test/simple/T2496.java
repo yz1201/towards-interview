@@ -15,6 +15,13 @@ public class T2496 {
         ss[0] = "000";
         ss[1] = "0a0";
         ss[2] = "00000a";
-        System.out.println(s2496.maximumValue(ss));
+//        System.out.println(s2496.maximumValue(ss));
+
+        int val = 20;
+        if (val  % 10 == 0){
+            System.out.println("yes");
+        }else{
+            System.out.println("no");
+        }
     }
 }
