@@ -13,7 +13,7 @@ public class T204 {
     public static void main(String[] args) {
         M204 m204 = new M204();
         log.info("start  - {}", m204.countPrimes(10));
-        System.out.println(m204.countPrimes(499979));
+        System.out.println(m204.countPrimesCopy(10));
         log.info("end  - {}", m204.countPrimes(10));
     }
 }
