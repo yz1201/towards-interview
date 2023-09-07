@@ -12,7 +12,10 @@ public class T6 {
 
     public static void main(String[] args) {
         M6 m6 = new M6();
-        System.out.println(m6.convertCopy("PAYPALISHIRING", 3));
         System.out.println(m6.convertCopy2("PAYPALISHIRING", 3));
+//        System.out.println(m6.convertCopy2("PAYPALISHIRING", 5));
+
+//        String s = "a".substring(0,3);
+//        System.out.println(s);
     }
 }

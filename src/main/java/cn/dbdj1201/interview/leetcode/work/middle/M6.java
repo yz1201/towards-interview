@@ -61,6 +61,7 @@ public class M6 {
         }
         StringBuilder ans = new StringBuilder();
         for (StringBuffer row : mat) {
+            System.out.println(row);
             ans.append(row);
         }
         return ans.toString();
