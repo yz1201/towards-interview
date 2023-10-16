@@ -29,11 +29,20 @@ public class M2512 {
         List<Integer> arrayList = new ArrayList<>(size);
         List<Integer> scoresArr = scores.values().stream().mapToInt(Integer::intValue).boxed().collect(Collectors.toList());
         for (Map.Entry<Integer, Integer> integerIntegerEntry : scores.entrySet()) {
+            //取最大值
             int max = scoresArr.stream().mapToInt(Integer::intValue).max().getAsInt();
-            if (integerIntegerEntry.getValue() == max) arrayList.add(integerIntegerEntry.getKey());
-
-            Iterator<Integer> iterator = scoresArr.iterator();
-            scoresArr = scoresArr.stream().filter(num -> num != max).collect(Collectors.toList());
+            //最大值优先
+            if (integerIntegerEntry.getValue() == max){
+                arrayList.add(integerIntegerEntry.getKey());
+                Iterator<Integer> iterator = scoresArr.iterator();
+                while (iterator.hasNext()){
+                    int next = iterator.next();
+                    if (next == max){
+                        iterator.remove();
+                        break;
+                    }
+                }
+            }
         }
         return arrayList.subList(0, Math.min(arrayList.size(), k));
     }
@@ -51,6 +60,25 @@ public class M2512 {
             }
         }
         return score;
+    }
+    public List<Integer> topStudentsV1(String[] positive_feedback, String[] negative_feedback,
+                                     String[] report, int[] student_id, int k) {
+        Map<Integer, Integer> scores = new HashMap<>();
+        int len = report.length;
+        Integer[] nums = new Integer[len];
+        for (int i = 0; i < len; i++) {
+            int score = evaluateScore(report[i], positive_feedback, negative_feedback);
+            scores.put(student_id[i], score);
+            nums[i] = score;
+        }
+        Arrays.sort(nums, Collections.reverseOrder());
+        List<Integer> arrayList = new ArrayList<>(len);
+        for (Map.Entry<Integer, Integer> integerIntegerEntry : scores.entrySet()) {
+            for (int num : nums) {
+                if (integerIntegerEntry.getValue() == num) arrayList.add(integerIntegerEntry.getKey());
+            }
+        }
+        return arrayList.subList(0, Math.min(arrayList.size(), k));
     }
 
 }
