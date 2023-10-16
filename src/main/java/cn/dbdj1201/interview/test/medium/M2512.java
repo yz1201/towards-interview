@@ -71,6 +71,7 @@ public class M2512 {
             scores.put(student_id[i], score);
             nums[i] = score;
         }
+
         Arrays.sort(nums, Collections.reverseOrder());
         List<Integer> arrayList = new ArrayList<>(len);
         for (Map.Entry<Integer, Integer> integerIntegerEntry : scores.entrySet()) {
