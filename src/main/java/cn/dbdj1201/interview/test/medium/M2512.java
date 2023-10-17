@@ -71,15 +71,49 @@ public class M2512 {
             scores.put(student_id[i], score);
             nums[i] = score;
         }
-
         Arrays.sort(nums, Collections.reverseOrder());
         List<Integer> arrayList = new ArrayList<>(len);
-        for (Map.Entry<Integer, Integer> integerIntegerEntry : scores.entrySet()) {
-            for (int num : nums) {
-                if (integerIntegerEntry.getValue() == num) arrayList.add(integerIntegerEntry.getKey());
+        int i = 0;
+        for (Integer num : nums) {
+            //num匹配。
+            for (Map.Entry<Integer, Integer> entry : scores.entrySet()) {
+                if (Objects.equals(entry.getValue(), num)) {
+                    arrayList.add(entry.getKey());
+                    i++;
+                    if (arrayList.size() > 1 && Objects.equals(arrayList.get(i), arrayList.get(i - 1))){
+
+
+                    }
+                }
             }
         }
         return arrayList.subList(0, Math.min(arrayList.size(), k));
     }
 
+
+    public List<Integer> topStudentsV2(String[] positive_feedback, String[] negative_feedback,
+                                       String[] report, int[] student_id, int k) {
+        Map<String, Integer> words = new HashMap<>();
+        for (String word : positive_feedback) {
+            words.put(word, 3);
+        }
+        for (String word : negative_feedback) {
+            words.put(word, -1);
+        }
+        int n = report.length;
+        int[][] A = new int[n][2];
+        for (int i = 0; i < n; i++) {
+            int score = 0;
+            for (String word : report[i].split(" ")) {
+                score += words.getOrDefault(word, 0);
+            }
+            A[i] = new int[]{score, student_id[i]};
+        }
+        Arrays.sort(A, (a, b) -> a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);
+        List<Integer> topK = new ArrayList<>();
+        for (int i = 0; i < k; i++) {
+            topK.add(A[i][1]);
+        }
+        return topK;
+    }
 }
