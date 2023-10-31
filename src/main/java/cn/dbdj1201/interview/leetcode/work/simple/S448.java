@@ -2,10 +2,7 @@ package cn.dbdj1201.interview.leetcode.work.simple;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -18,8 +15,7 @@ public class S448 {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> res = new ArrayList<>();
         int len = nums.length;
-        List<Integer> integers = Arrays.stream(nums).boxed().collect(Collectors.toList());
-        Set<Integer> collect = integers.stream().collect(Collectors.toSet());
+        Set<Integer> collect = Arrays.stream(nums).boxed().collect(Collectors.toSet());
         for (int i = 1; i <= len; i++) {
             if (!collect.contains(i)) res.add(i);
         }
