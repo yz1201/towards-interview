@@ -2,6 +2,8 @@ package cn.dbdj1201.interview.leetcode.work;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @Author: yz1201
  * @Date: 2021/12/20 15:56
@@ -11,7 +13,7 @@ public class ListNode {
 
     int val;
     ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    public ListNode() {}
+    public ListNode(int val) { this.val = val; }
+    public ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }

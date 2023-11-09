@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="final-trget" />
         <module name="final-target" />
-        <module name="towards-interview" />
         <module name="DeepInSpring" />
       </profile>
     </annotationProcessing>
