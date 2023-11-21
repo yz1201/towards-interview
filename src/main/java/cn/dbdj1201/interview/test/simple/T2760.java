@@ -12,7 +12,8 @@ public class T2760 {
 
     public static void main(String[] args) {
         S2760 s2760 = new S2760();
-        int[] nums = {3, 2, 5, 4};
+//        int[] nums = {3, 2, 5, 4};
+        int[] nums = { 2, 5, 5};
         s2760.longestAlternatingSubarrayCopy(nums, 5);
     }
 }

@@ -16,13 +16,11 @@ public class S2760 {
             else return 0;
         }
         int left = 0;
-        int maxLen = 0;
         while (left < len) {
             if (nums[left] % 2 != 0) {
                 left++;
                 continue;
             }
-            maxLen++;
             left++;
         }
 
