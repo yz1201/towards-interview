@@ -65,6 +65,11 @@ public class S2437 {
         return res;
     }
 
+    /**
+     * 迷茫
+     * @param arr
+     * @param pos
+     */
     public void dfs(char[] arr, int pos) {
         if (pos == arr.length) {
             if (check(arr)) {
