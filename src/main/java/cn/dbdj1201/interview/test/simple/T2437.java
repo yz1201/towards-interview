@@ -12,6 +12,11 @@ public class T2437 {
 
     public static void main(String[] args) {
         S2437 s2437 = new S2437();
-        s2437.countTimeV1("2?:??");
+//        s2437.countTimeV1("2?:??");
+        s2437.countTimeCopy("2?:??");
+
+        String s= "asdas";
+        System.out.println(s.charAt(200));
+
     }
 }
