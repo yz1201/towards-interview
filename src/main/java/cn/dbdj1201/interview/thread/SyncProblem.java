@@ -50,7 +50,7 @@ public class SyncProblem {
         number.start();
         // 保证线程letter线程先运行
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -12,7 +12,6 @@ public class SyncProblemLetterNumber {
 
     static int len = 26;
     static ReentrantLock lock = new ReentrantLock();
-
     static Condition letterCon = lock.newCondition();
     static Condition numberCon = lock.newCondition();
     static Thread letter = new Thread(() -> {

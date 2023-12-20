@@ -16,7 +16,7 @@ public class ReentrantLockTest extends Thread {
         for (int i = 0; i < len; i++) {
             lock.lock();
             try {
-                System.out.println(Thread.currentThread().getName() + " achieve lock");
+                System.out.println(Thread.currentThread().getName() + " achieve lock " + i);
             } finally {
                 lock.unlock();
             }
