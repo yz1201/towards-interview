@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
 @Slf4j
 public class AlternatePrintTest2 {
     public static void main(String[] args) throws InterruptedException {
-        AwaitSignal awaitSignal = new AwaitSignal(200000);
+        AwaitSignal awaitSignal = new AwaitSignal(20000);
         Condition a_condition = awaitSignal.newCondition();
         Condition b_condition = awaitSignal.newCondition();
         Condition c_condition = awaitSignal.newCondition();
@@ -50,9 +50,9 @@ class AwaitSignal extends ReentrantLock {
      * @param next    下一间休息室
      */
     public void print(String str, Condition current, Condition next) {
-        for (int i = 0; i < loopNumber; i++) {
+        try {
             lock();
-            try {
+            for (int i = 0; i < loopNumber; i++) {
                 try {
                     current.await();
                     System.out.print(str);
@@ -64,9 +64,9 @@ class AwaitSignal extends ReentrantLock {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            } finally {
-                unlock();
             }
+        } finally {
+            unlock();
         }
     }
 }
