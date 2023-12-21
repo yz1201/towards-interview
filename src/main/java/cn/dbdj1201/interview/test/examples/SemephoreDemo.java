@@ -25,13 +25,13 @@ public class SemephoreDemo {
                 try {
                     semaphore.acquire();
 //                    System.out.println(Thread.currentThread().getName() + "begin");
-                    log.info(Thread.currentThread().getName() + "begin");
+                    log.info(Thread.currentThread().getName() + "  begin");
 
                     TimeUnit.MILLISECONDS.sleep(5000);
 
                     semaphore.release();
 //                    System.out.println(Thread.currentThread().getName() + "end");
-                    log.info(Thread.currentThread().getName() + "end");
+                    log.info(Thread.currentThread().getName() + " end");
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
