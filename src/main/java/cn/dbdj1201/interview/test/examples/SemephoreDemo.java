@@ -18,6 +18,7 @@ public class SemephoreDemo {
         Semaphore semaphore = new Semaphore(5);
 
         ExecutorService executorService = Executors.newFixedThreadPool(10);
+        Executors.newCachedThreadPool();
 
         int runs = 10;
         for (int i = 0; i < runs; i++) {
@@ -25,7 +26,7 @@ public class SemephoreDemo {
                 try {
                     semaphore.acquire();
 //                    System.out.println(Thread.currentThread().getName() + "begin");
-                    log.info(Thread.currentThread().getName() + "  begin");
+                    log.info(Thread.currentThread().getName() + "  begin " + semaphore.availablePermits());
 
                     TimeUnit.MILLISECONDS.sleep(5000);
 

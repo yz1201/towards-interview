@@ -24,7 +24,7 @@ public class Test20230329 {
                 if (semaphore.tryAcquire())
                     log.info("  hello");
                 try {
-                    TimeUnit.MILLISECONDS.sleep(100);
+                    TimeUnit.MILLISECONDS.sleep(1000);
                     log.info("free");
                     semaphore.release();
                 } catch (InterruptedException e) {
