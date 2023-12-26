@@ -20,6 +20,4 @@ public class M1276 {
         ans.add(cheeseSlices * 2 - tomatoSlices / 2);
         return ans;
     }
-
-
 }
