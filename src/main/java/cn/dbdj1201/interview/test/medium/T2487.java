@@ -18,6 +18,6 @@ public class T2487 {
         ListNode listNode2 = new ListNode(13, listNode3);
         ListNode listNode1 = new ListNode(2, listNode2);
         ListNode listNode = new ListNode(5, listNode1);
-        System.out.println(m2487.removeNodes(listNode));
+        System.out.println(m2487.removeNodesCp2(listNode));
     }
 }

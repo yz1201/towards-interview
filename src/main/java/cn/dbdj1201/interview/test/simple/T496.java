@@ -3,6 +3,8 @@ package cn.dbdj1201.interview.test.simple;
 import cn.dbdj1201.interview.leetcode.work.simple.S496;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Arrays;
+
 /**
  * @Author: yz1201
  * @Date: 2023/12/26 14:38
@@ -14,6 +16,6 @@ public class T496 {
         S496 s496 = new S496();
         int[] nums1 = {4, 1, 2};
         int[] nums2 = {1, 3, 4, 2};
-        s496.nextGreaterElementCp(nums1, nums2);
+        System.out.println(": "+Arrays.toString(s496.nextGreaterElementCp(nums1, nums2)));
     }
 }
