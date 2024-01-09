@@ -21,7 +21,7 @@ public class MonotoneStackDemo {
         System.out.println(deque.pop());
         System.out.println(deque.pop());
         for (int num : nums) {
-            while (!deque.isEmpty() && num <= deque.peek()) {
+            while (!deque.isEmpty() && num >= deque.peek()) {
                 deque.pop();
             }
             deque.push(num);
