@@ -12,7 +12,7 @@ public class T2645 {
 
     public static void main(String[] args) {
         M2645 m2645 = new M2645();
-        System.out.println(m2645.addMinimum("aaaabb"));
+        System.out.println(m2645.addMinimumCp2("aaaabb"));
 
     }
 

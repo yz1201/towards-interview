@@ -53,5 +53,16 @@ public class M2645 {
         return res;
     }
 
+    public int addMinimumCp3(String word) {
+        int cnt = 0, n = word.length();
+        char[] charArray = word.toCharArray();
+        for (int i = 0; i < n; i++) {
+            if (i == n -  1 || charArray[i] >= charArray[i + 1]) {
+                cnt++;
+            }
+        }
+        return 3 * cnt - n;
+    }
+
 
 }
