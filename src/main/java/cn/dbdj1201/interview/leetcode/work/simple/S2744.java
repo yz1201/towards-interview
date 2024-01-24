@@ -52,4 +52,11 @@ public class S2744 {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        int[] nums = {2,3,1,4,5,6};
+        if (nums[0] < nums[1]) {
+            System.out.println("true");
+        }
+    }
 }
