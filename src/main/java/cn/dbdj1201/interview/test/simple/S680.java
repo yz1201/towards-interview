@@ -46,7 +46,4 @@ public class S680 {
         return true;
     }
 
-
-
-
 }
