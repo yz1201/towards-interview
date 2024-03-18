@@ -47,4 +47,22 @@ public class S232 {
             outStack.push(inStack.pop());
         }
     }
+
+    public static void main(String[] args) {
+        String test1 = "2";
+        String test2 = "12";
+        String test3 = "22";
+        String test4 = "28";
+        String test5 = "8";
+        String test6 = "18";
+        String content = "8,28";
+
+        System.out.println("8,28".contains(test1));
+        System.out.println("8,28".contains(test2));
+        System.out.println("8,28".contains(test3));
+        System.out.println("8,28".contains(test4));
+        System.out.println("8,28".contains(test5));
+        System.out.println("8,28".contains(test6));
+
+    }
 }
