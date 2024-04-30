@@ -18,12 +18,14 @@ public class TestMain0217 {
          *  /home/mfs/nfs/inter/XXPL/test.java
          *  /home/mfs/MFS/fundFile/test.java
          */
-//        Path path = Paths.get("/test/01/heihei");
-//        Path path1 = Paths.get("/test/01/heihei/haha/ooo");
-//        Path path2 = Paths.get("/testa/02/heihei/haha/ooo");
-//        Path path3 = Paths.get("/home/mfs/nfs/inter/XXPL/test.java");
-//        Path path4 = Paths.get("/home/mfs/MFS/fundFile/test.java");
-//        System.out.println(path3.relativize(path4));
+        Path path = Paths.get("/test/01/heihei");
+        Path path1 = Paths.get("/test/01/heihei/haha/ooo");
+        Path path2 = Paths.get("/testa/02/heihei/haha/ooo");
+        Path path3 = Paths.get("/home/mfs/nfs/inter/XXPL/test.java");
+        Path path4 = Paths.get("/home/mfs/MFS/fundFile/test.java");
+        Path path6 = Paths.get("/home/mfs");
+        Path path5 = Paths.get("/test.java");
+        System.out.println(path6.relativize(path3));
 
         LocalDateTime date =LocalDateTime.now();
 //        Duration.between();

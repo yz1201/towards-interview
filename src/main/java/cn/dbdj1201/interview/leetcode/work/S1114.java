@@ -36,4 +36,16 @@ public class S1114 {
         // printThird.run() outputs "third". Do not change or remove this line.
         printThird.run();
     }
+
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("11111");
+        System.out.println(sb);
+        sb.deleteCharAt(sb.indexOf("1"));
+        System.out.println(sb);
+//        sb.deleteCharAt(sb.indexOf("2"));
+//        System.out.println(sb);
+
+        String s = "1234556";
+        System.out.println(s.contains("1、2、3"));
+    }
 }
