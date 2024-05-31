@@ -2,6 +2,9 @@ package cn.dbdj1201.interview.leetcode.work.simple;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Author: yz1201
  * @Date: 2024/5/17 14:24
@@ -58,5 +61,14 @@ public class S762 {
         char a = '1';
         System.out.println(a  -1 );
         System.out.println('1');
+
+        List<Integer> nums = new ArrayList<>();
+        int len = 100;
+        for (int i = 0; i < len; i++) {
+            nums.add(i);
+        }
+        System.out.println(nums.stream().anyMatch(num -> num >1000));
+
+
     }
 }
