@@ -1,6 +1,7 @@
 package cn.dbdj1201.interview.leetcode.work.simple;
 
 import java.util.Arrays;
+import java.util.Map;
 
 /**
  * @Author: yz1201
@@ -9,6 +10,7 @@ import java.util.Arrays;
 public class Q0109 {
 
     public boolean isFlipedString(String s1, String s2) {
+//        List<Map>
         if (s1.length()!=s2.length()) return false;
         char[] cArr1 = s1.toCharArray();
         char[] cArr2 = s2.toCharArray();
